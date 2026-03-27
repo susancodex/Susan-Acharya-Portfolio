@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap, CheckSquare } from "lucide-react";
+import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap, CheckSquare, DollarSign } from "lucide-react";
 import studentManagement from "@/assets/student-management.jpg";
 import egovernancePortal from "@/assets/egovernance-portal.jpg";
 import pythonProject from "@/assets/python-project.jpg";
