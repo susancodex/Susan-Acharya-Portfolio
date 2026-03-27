@@ -4,6 +4,7 @@ import studentManagement from "@/assets/student-management.jpg";
 import egovernancePortal from "@/assets/egovernance-portal.jpg";
 import pythonProject from "@/assets/python-project.jpg";
 import enhancedTodoListProject from "@/assets/enhanced-todo-list-project.jpg";
+import financeTrackerProject from "@/assets/finance-tracker-project.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
