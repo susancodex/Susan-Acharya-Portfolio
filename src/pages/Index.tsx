@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap, CheckSquare } from "lucide-react";
+import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap, CheckSquare, DollarSign } from "lucide-react";
 import studentManagement from "@/assets/student-management.jpg";
 import egovernancePortal from "@/assets/egovernance-portal.jpg";
 import pythonProject from "@/assets/python-project.jpg";
 import enhancedTodoListProject from "@/assets/enhanced-todo-list-project.jpg";
+import financeTrackerProject from "@/assets/finance-tracker-project.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -662,6 +663,15 @@ export default function Index() {
       icon: <Code className="h-6 w-6" />,
       image: pythonProject,
       github: "https://github.com/susanacharya12/Python-Project.git",
+      demo: "Coming Soon"
+    },
+    {
+      title: "Finance Tracker",
+      description: "A personal finance tracking web app that helps users manage income and expenses. Features include adding transactions, categorizing expenses, viewing financial summaries, and tracking spending habits over time.",
+      technologies: ["Python", "Django", "SQLite", "HTML", "CSS"],
+      icon: <DollarSign className="h-6 w-6" />,
+      image: financeTrackerProject,
+      github: "https://github.com/susanacharya12/Finance_Tracker.git",
       demo: "Coming Soon"
     }
   ];
