@@ -664,6 +664,15 @@ export default function Index() {
       image: pythonProject,
       github: "https://github.com/susanacharya12/Python-Project.git",
       demo: "Coming Soon"
+    },
+    {
+      title: "Finance Tracker",
+      description: "A personal finance tracking web app that helps users manage income and expenses. Features include adding transactions, categorizing expenses, viewing financial summaries, and tracking spending habits over time.",
+      technologies: ["Python", "Django", "SQLite", "HTML", "CSS"],
+      icon: <DollarSign className="h-6 w-6" />,
+      image: financeTrackerProject,
+      github: "https://github.com/susanacharya12/Finance_Tracker.git",
+      demo: "Coming Soon"
     }
   ];
 
