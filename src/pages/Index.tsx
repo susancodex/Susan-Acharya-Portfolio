@@ -44,96 +44,6 @@ const AboutSection = () => {
   );
 };
 
-// Projects Section Component with stagger animations
-const ProjectsSection = ({ projects }: { projects: any[] }) => {
-  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
-  const [containerRef, visibleItems] = useStaggerAnimation(projects.length, 150);
-
-  return (
-    <>
-      <h2 
-        ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-12 transition-all duration-1000 ${
-          titleVisible ? 'animate-fade-in-down opacity-100' : 'opacity-0 -translate-y-8'
-        }`}
-      >
-        Featured Projects
-      </h2>
-      <div ref={containerRef as any} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <Card 
-            key={index} 
-            className={`group glass-card card-glow transition-all duration-700 transform ${
-              visibleItems[index] 
-                ? 'animate-scale-in opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            } hover:-translate-y-4 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20`}
-          >
-            {project.image && (
-              <div className="overflow-hidden rounded-t-lg">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-            )}
-            <CardHeader>
-              <div className="flex items-center space-x-3 mb-2">
-                <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:rotate-6">
-                  {project.icon}
-                </div>
-                <CardTitle className="group-hover:text-primary transition-colors duration-300">
-                  {project.title}
-                </CardTitle>
-              </div>
-              <CardDescription className="group-hover:text-foreground/80 transition-colors">
-                {project.description}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech: string, techIndex: number) => (
-                  <Badge 
-                    key={tech} 
-                    variant="secondary" 
-                    className={`hover:bg-primary hover:text-primary-foreground transition-all duration-300 ${
-                      visibleItems[index] ? 'animate-fade-in' : 'opacity-0'
-                    }`}
-                    style={{ animationDelay: `${techIndex * 100}ms` }}
-                  >
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-              <div className="flex gap-2">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="flex-1"
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1"
-                  disabled={project.demo === "Coming Soon"}
-                  onClick={() => project.demo !== "Coming Soon" && window.open(project.demo, '_blank')}
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  {project.demo === "Coming Soon" ? "Coming Soon" : "Demo"}
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </>
-  );
-};
-
 // Skills Section Component with category animations
 const SkillsSection = () => {
   const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
@@ -623,8 +533,6 @@ export default function Index() {
     return () => clearInterval(typewriterInterval);
   }, []);
 
-  const projects: any[] = [];
-
   const skills = {
     Frontend: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Responsive Design"],
     Backend: ["Python", "Django", "Django REST Framework", "RESTful APIs"],
@@ -654,7 +562,7 @@ export default function Index() {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold text-primary">Susan Acharya</h1>
             <div className="hidden md:flex space-x-6">
-              {["about", "projects", "skills", "education", "contact"].map((item) => (
+              {["about", "skills", "education", "contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -771,13 +679,6 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center">
             <AboutSection />
           </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-20">
-        <div className="container mx-auto px-4">
-          <ProjectsSection projects={projects} />
         </div>
       </section>
 
