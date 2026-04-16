@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap, CheckSquare, DollarSign } from "lucide-react";
-import studentManagement from "@/assets/student-management.jpg";
-import financeTracker from "@/assets/finance-tracker-project.jpg";
-import pythonProject from "@/assets/python-project.jpg";
-import enhancedTodoListProject from "@/assets/enhanced-todo-list-project.jpg";
+import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
