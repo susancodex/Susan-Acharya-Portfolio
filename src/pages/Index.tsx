@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap, CheckSquare, DollarSign } from "lucide-react";
-import studentManagement from "@/assets/student-management.jpg";
-import financeTracker from "@/assets/finance-tracker-project.jpg";
-import pythonProject from "@/assets/python-project.jpg";
-import enhancedTodoListProject from "@/assets/enhanced-todo-list-project.jpg";
+import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Download, ExternalLink, Code, Database, Globe, Award, Star, Trophy, BookOpen, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -627,53 +623,7 @@ export default function Index() {
     return () => clearInterval(typewriterInterval);
   }, []);
 
-  const projects = [
-    {
-      title: "Todo List",
-      description: "Built a simple yet powerful web app where users can register, log in, and manage their personal tasks with ease. Features user authentication (register/login/logout), add/complete/delete/search tasks, each user has their own private task list, and clean responsive UI for seamless experience.",
-      technologies: ["Python", "Django", "SQLite", "HTML", "CSS"],
-      icon: <CheckSquare className="h-6 w-6" />,
-      image: enhancedTodoListProject,
-      github: "https://github.com/susanacharya12/todo-list.git",
-      demo: "Coming Soon"
-    },
-    {
-      title: "Student Management System",
-      description: "Comprehensive system for managing student records, grades, and academic information",
-      technologies: ["Django", "SQLite3", "Bootstrap"],
-      icon: <BookOpen className="h-6 w-6" />,
-      image: studentManagement,
-      github: "https://github.com/susanacharya12/student-management-system.git",
-      demo: "Coming Soon"
-    },
-    {
-      title: "Finance Tracker",
-      description: "A full-stack finance tracking application to manage income, expenses, and budgets with visual insights",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      icon: <DollarSign className="h-6 w-6" />,
-      image: financeTracker,
-      github: "https://github.com/susancodex/Finance_Tracker.git",
-      demo: "https://finance-tracker-frontend-zeid.onrender.com/profile"
-    },
-    {
-      title: "Python Projects",
-      description: "A collection of beginner-friendly projects built using pure Python (without any external frameworks or libraries), including: Password Generator, Random Number Game, Rock Paper Scissors, Treasure Island Game",
-      technologies: ["Python"],
-      icon: <Code className="h-6 w-6" />,
-      image: pythonProject,
-      github: "https://github.com/susanacharya12/Python-Project.git",
-      demo: "Coming Soon"
-    },
-    {
-      title: "Finance Tracker",
-      description: "A personal finance tracking web app that helps users manage income and expenses. Features include adding transactions, categorizing expenses, viewing financial summaries, and tracking spending habits over time.",
-      technologies: ["Python", "Django", "SQLite", "HTML", "CSS"],
-      icon: <DollarSign className="h-6 w-6" />,
-      image: financeTracker,
-      github: "https://github.com/susanacharya12/Finance_Tracker.git",
-      demo: "Coming Soon"
-    }
-  ];
+  const projects: any[] = [];
 
   const skills = {
     Frontend: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Responsive Design"],
