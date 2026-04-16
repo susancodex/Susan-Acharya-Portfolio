@@ -39,9 +39,7 @@ const AboutSection = () => {
       >
         Motivated junior Python and web developer with hands-on experience building scalable, 
         user-friendly web applications using Django and Python. Skilled in RESTful API design, 
-        modern web technologies, and responsive design. Strong problem solver and team player. 
-        Currently pursuing an undergraduate degree in BSc. CSIT. Seeking opportunities to 
-        contribute and grow as a developer.
+        modern web technologies, and responsive design.
       </p>
     </>
   );
