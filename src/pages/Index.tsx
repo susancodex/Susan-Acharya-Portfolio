@@ -911,42 +911,42 @@ export default function Index() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-sky-50/70">
+      <section id="skills" className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-4">
           <SkillsSection />
         </div>
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20">
+      <section id="education" className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <EducationSection />
         </div>
       </section>
 
       {/* Certificates Section */}
-      <section className="py-20 bg-sky-50/70">
+      <section className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-4">
           <CertificatesSection />
         </div>
       </section>
 
       {/* Languages & Achievements */}
-      <section className="py-20 bg-sky-50/70">
+      <section className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-4">
           <LanguagesAchievementsSection />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <ContactSection handleContactSubmit={handleContactSubmit} />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-sky-100 py-8">
+      <footer className="bg-white/60 backdrop-blur-sm border-t border-sky-100 py-8 relative z-10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
             © 2024 Susan Acharya. All rights reserved.
