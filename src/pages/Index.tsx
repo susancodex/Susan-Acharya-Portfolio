@@ -895,7 +895,7 @@ export default function Index() {
        </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-sky-50/70">
+      <section id="about" className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <AboutSection />
@@ -904,7 +904,7 @@ export default function Index() {
       </section>
 
       {/* Featured Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <FeaturedProjectsSection />
         </div>
