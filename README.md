@@ -1,16 +1,18 @@
 # Susan Acharya Portfolio
 
-Personal portfolio website for Susan Acharya, built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui.
+Personal portfolio website for Susan Acharya, Junior Django & Python Developer. Built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui.
 
 Live site: https://www.susanacharya1.com.np
 
 ## Overview
 
-This project showcases:
+This portfolio showcases:
 
 - Professional summary and introduction
-- Technical skills and tools
-- Education and certifications
+- Technical skills and technologies (Python, Django, React, REST APIs)
+- Featured projects section
+- Education background and certifications
+- Achievements and languages
 - Contact section and social links
 
 ## Tech Stack
