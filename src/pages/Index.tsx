@@ -699,9 +699,9 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative bg-transparent">
        {/* Global Animated Bubble Background — visible behind every section */}
-       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 hero-gradient">
          <div className="absolute top-[10%] left-[8%] w-80 h-80 bg-gradient-to-br from-indigo-400/15 to-blue-400/8 rounded-full bg-orb blur-3xl opacity-40"></div>
          <div className="absolute top-[40%] right-[5%] w-96 h-96 bg-gradient-to-br from-purple-400/12 to-cyan-400/8 rounded-full bg-orb-2 blur-3xl opacity-35"></div>
          <div className="absolute bottom-[10%] left-[25%] w-72 h-72 bg-gradient-to-br from-cyan-400/10 to-blue-400/5 rounded-full bg-orb-3 blur-3xl opacity-30"></div>
