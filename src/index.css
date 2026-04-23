@@ -139,11 +139,55 @@
      animation-delay: -9s;
    }
    
-   .bubble {
+   .premium-bubble {
      position: absolute;
      border-radius: 50%;
-     background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), rgba(99, 102, 241, 0.1));
-     animation: bubble-rise 20s linear infinite, bubble-float 3s ease-in-out infinite;
+     filter: blur(2px);
+     pointer-events: none;
+     animation: premium-rise var(--rise-duration) linear infinite, premium-sway var(--sway-duration) ease-in-out infinite;
+     opacity: 0;
+   }
+   
+   @keyframes premium-rise {
+     0% { 
+       transform: translateY(100vh) scale(0); 
+       opacity: 0;
+     }
+     10% { opacity: var(--bubble-opacity); }
+     90% { opacity: var(--bubble-opacity); }
+     100% { 
+       transform: translateY(-20vh) scale(1); 
+       opacity: 0;
+     }
+   }
+   
+   @keyframes premium-sway {
+     0%, 100% { transform: translateX(0); }
+     50% { transform: translateX(var(--sway-distance)); }
+   }
+   
+   .bubble-sky {
+     background: radial-gradient(circle at 30% 30%, rgba(14, 165, 233, 0.4), rgba(14, 165, 233, 0.05));
+     box-shadow: 0 0 20px rgba(14, 165, 233, 0.1);
+   }
+   
+   .bubble-purple {
+     background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.4), rgba(139, 92, 246, 0.05));
+     box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+   }
+   
+   .bubble-cyan {
+     background: radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.4), rgba(34, 211, 238, 0.05));
+     box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+   }
+   
+   @media (max-width: 768px) {
+     .premium-bubble {
+       display: none;
+     }
+     .premium-bubble:nth-child(-n+6) {
+       display: block;
+     }
    }
    
    @keyframes gradient-text {

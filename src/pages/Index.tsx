@@ -751,39 +751,30 @@ export default function Index() {
 
        {/* Hero Section */}
        <section className="min-h-screen flex items-center justify-center relative overflow-hidden hero-gradient">
-         {/* Animated Background Elements */}
-         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-           <div className="absolute top-[5%] left-[5%] w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-blue-400/10 rounded-full bg-orb blur-3xl"></div>
-           <div className="absolute top-[15%] right-[10%] w-96 h-96 bg-gradient-to-br from-purple-400/15 to-cyan-400/10 rounded-full bg-orb-2 blur-3xl"></div>
-           <div className="absolute bottom-[20%] left-[15%] w-72 h-72 bg-gradient-to-br from-cyan-400/12 to-emerald-400/8 rounded-full bg-orb-3 blur-3xl"></div>
-           <div className="absolute bottom-[10%] right-[5%] w-64 h-64 bg-gradient-to-br from-pink-400/10 to-indigo-400/8 rounded-full bg-orb-4 blur-3xl"></div>
-           <div className="absolute top-[40%] left-[40%] w-48 h-48 bg-gradient-to-br from-blue-400/10 to-purple-400/6 rounded-full bg-orb blur-2xl" style={{animationDelay: '-4s'}}></div>
+         {/* Premium Animated Bubble Background */}
+         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+           {/* Large Background Orbs */}
+           <div className="absolute top-[5%] left-[5%] w-80 h-80 bg-gradient-to-br from-indigo-400/15 to-blue-400/8 rounded-full bg-orb blur-3xl opacity-40"></div>
+           <div className="absolute top-[20%] right-[10%] w-96 h-96 bg-gradient-to-br from-purple-400/12 to-cyan-400/8 rounded-full bg-orb-2 blur-3xl opacity-35"></div>
+           <div className="absolute bottom-[15%] left-[20%] w-72 h-72 bg-gradient-to-br from-cyan-400/10 to-blue-400/5 rounded-full bg-orb-3 blur-3xl opacity-30"></div>
            
-           {/* Rising Bubbles */}
-           <div className="bubble w-4 h-4 left-[10%]" style={{animationDelay: '0s'}}></div>
-           <div className="bubble w-6 h-6 left-[25%]" style={{animationDelay: '2s'}}></div>
-           <div className="bubble w-3 h-3 left-[40%]" style={{animationDelay: '4s'}}></div>
-           <div className="bubble w-5 h-5 left-[60%]" style={{animationDelay: '6s'}}></div>
-           <div className="bubble w-4 h-4 left-[75%]" style={{animationDelay: '8s'}}></div>
-           <div className="bubble w-6 h-6 left-[90%]" style={{animationDelay: '10s'}}></div>
-           <div className="bubble w-3 h-3 left-[15%]" style={{animationDelay: '12s'}}></div>
-           <div className="bubble w-5 h-5 left-[50%]" style={{animationDelay: '14s'}}></div>
-           <div className="bubble w-4 h-4 left-[85%]" style={{animationDelay: '16s'}}></div>
-           <div className="bubble w-3 h-3 left-[30%]" style={{animationDelay: '18s'}}></div>
+           {/* Premium Floating Bubbles */}
+           <div className="premium-bubble w-4 h-4 bubble-sky" style={{"--rise-duration": "18s", "--sway-duration": "4s", "--sway-distance": "20px", "--bubble-opacity": "0.25", "left": "10%", "animationDelay": "0s"}}></div>
+           <div className="premium-bubble w-8 h-8 bubble-purple" style={{"--rise-duration": "22s", "--sway-duration": "5s", "--sway-distance": "30px", "--bubble-opacity": "0.20", "left": "22%", "animationDelay": "2s"}}></div>
+           <div className="premium-bubble w-3 h-3 bubble-cyan" style={{"--rise-duration": "16s", "--sway-duration": "3.5s", "--sway-distance": "15px", "--bubble-opacity": "0.30", "left": "35%", "animationDelay": "4s"}}></div>
+           <div className="premium-bubble w-6 h-6 bubble-sky" style={{"--rise-duration": "20s", "--sway-duration": "4.5s", "--sway-distance": "25px", "--bubble-opacity": "0.22", "left": "48%", "animationDelay": "6s"}}></div>
+           <div className="premium-bubble w-5 h-5 bubble-purple" style={{"--rise-duration": "19s", "--sway-duration": "4s", "--sway-distance": "22px", "--bubble-opacity": "0.28", "left": "62%", "animationDelay": "8s"}}></div>
+           <div className="premium-bubble w-7 h-7 bubble-cyan" style={{"--rise-duration": "24s", "--sway-duration": "5.5s", "--sway-distance": "35px", "--bubble-opacity": "0.18", "left": "75%", "animationDelay": "10s"}}></div>
+           <div className="premium-bubble w-4 h-4 bubble-sky" style={{"--rise-duration": "17s", "--sway-duration": "3s", "--sway-distance": "18px", "--bubble-opacity": "0.26", "left": "88%", "animationDelay": "12s"}}></div>
+           <div className="premium-bubble w-6 h-6 bubble-purple" style={{"--rise-duration": "21s", "--sway-duration": "4s", "--sway-distance": "28px", "--bubble-opacity": "0.20", "left": "15%", "animationDelay": "14s"}}></div>
+           <div className="premium-bubble w-3 h-3 bubble-cyan" style={{"--rise-duration": "15s", "--sway-duration": "3s", "--sway-distance": "12px", "--bubble-opacity": "0.32", "left": "40%", "animationDelay": "16s"}}></div>
+           <div className="premium-bubble w-5 h-5 bubble-sky" style={{"--rise-duration": "23s", "--sway-duration": "5s", "--sway-distance": "24px", "--bubble-opacity": "0.24", "left": "70%", "animationDelay": "18s"}}></div>
+           <div className="premium-bubble w-8 h-8 bubble-purple" style={{"--rise-duration": "25s", "--sway-duration": "6s", "--sway-distance": "40px", "--bubble-opacity": "0.15", "left": "5%", "animationDelay": "7s"}}></div>
+           <div className="premium-bubble w-4 h-4 bubble-cyan" style={{"--rise-duration": "19s", "--sway-duration": "4s", "--sway-distance": "20px", "--bubble-opacity": "0.27", "left": "92%", "animationDelay": "11s"}}></div>
          </div>
          
          <div className="container mx-auto px-4 pt-20 relative z-10 flex flex-col items-center">
-            {/* Profile Section Background Bubbles */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] pointer-events-none opacity-20">
-              <div className="absolute w-3 h-3 top-[20%] left-[30%] bg-primary/40 rounded-full animate-bounce" style={{animationDelay: '0s', animationDuration: '3s'}}></div>
-              <div className="absolute w-2 h-2 top-[35%] left-[60%] bg-blue-400/50 rounded-full animate-bounce" style={{animationDelay: '0.5s', animationDuration: '3.5s'}}></div>
-              <div className="absolute w-4 h-4 top-[50%] left-[25%] bg-indigo-400/30 rounded-full animate-bounce" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
-              <div className="absolute w-2 h-2 top-[65%] left-[70%] bg-cyan-400/40 rounded-full animate-bounce" style={{animationDelay: '1.5s', animationDuration: '3s'}}></div>
-              <div className="absolute w-3 h-3 top-[40%] left-[45%] bg-purple-400/35 rounded-full animate-bounce" style={{animationDelay: '2s', animationDuration: '3.5s'}}></div>
-              <div className="absolute w-2 h-2 top-[75%] left-[40%] bg-blue-300/45 rounded-full animate-bounce" style={{animationDelay: '2.5s', animationDuration: '4s'}}></div>
-              <div className="absolute w-3 h-3 top-[55%] left-[55%] bg-indigo-300/40 rounded-full animate-bounce" style={{animationDelay: '3s', animationDuration: '3s'}}></div>
-              <div className="absolute w-2 h-2 top-[30%] left-[40%] bg-cyan-300/50 rounded-full animate-bounce" style={{animationDelay: '3.5s', animationDuration: '3.5s'}}></div>
-            </div>
+
            {/* Profile Image */}
            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
              <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto mb-6">
