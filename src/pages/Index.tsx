@@ -34,11 +34,10 @@ const AboutSection = () => {
           textVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
         }`}
       >
-        Motivated junior Python and web developer with hands-on experience building scalable, 
-        user-friendly web applications using Django and Python. Skilled in RESTful API design, 
-        modern web technologies, and responsive design. Strong problem solver and team player. 
-        Currently pursuing an undergraduate degree in BSc. CSIT. Seeking opportunities to 
-        contribute and grow as a developer.
+   Motivated developer with hands-on experience building scalable and user-friendly web applications. 
+  Skilled in RESTful API design, modern web technologies, and responsive design. Strong problem solver and collaborative 
+  team player with a focus on writing clean and efficient code. Currently pursuing a Bachelor’s degree in BSc. CSIT and 
+  seeking opportunities to contribute, learn, and grow as a develope
       </p>
     </>
   );
