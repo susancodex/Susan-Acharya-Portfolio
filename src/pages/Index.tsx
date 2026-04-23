@@ -771,29 +771,7 @@ export default function Index() {
        </nav>
 
        {/* Hero Section */}
-       <section className="min-h-screen flex items-center justify-center relative overflow-hidden hero-gradient">
-         {/* Premium Animated Bubble Background */}
-         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-           {/* Large Background Orbs */}
-           <div className="absolute top-[5%] left-[5%] w-80 h-80 bg-gradient-to-br from-indigo-400/15 to-blue-400/8 rounded-full bg-orb blur-3xl opacity-40"></div>
-           <div className="absolute top-[20%] right-[10%] w-96 h-96 bg-gradient-to-br from-purple-400/12 to-cyan-400/8 rounded-full bg-orb-2 blur-3xl opacity-35"></div>
-           <div className="absolute bottom-[15%] left-[20%] w-72 h-72 bg-gradient-to-br from-cyan-400/10 to-blue-400/5 rounded-full bg-orb-3 blur-3xl opacity-30"></div>
-           
-           {/* Premium Floating Bubbles */}
-           <div className="premium-bubble w-4 h-4 bubble-sky" style={{"--rise-duration": "18s", "--sway-duration": "4s", "--sway-distance": "20px", "--bubble-opacity": "0.25", left: "10%", animationDelay: "0s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-8 h-8 bubble-purple" style={{"--rise-duration": "22s", "--sway-duration": "5s", "--sway-distance": "30px", "--bubble-opacity": "0.20", left: "22%", animationDelay: "2s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-3 h-3 bubble-cyan" style={{"--rise-duration": "16s", "--sway-duration": "3.5s", "--sway-distance": "15px", "--bubble-opacity": "0.30", left: "35%", animationDelay: "4s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-6 h-6 bubble-sky" style={{"--rise-duration": "20s", "--sway-duration": "4.5s", "--sway-distance": "25px", "--bubble-opacity": "0.22", left: "48%", animationDelay: "6s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-5 h-5 bubble-purple" style={{"--rise-duration": "19s", "--sway-duration": "4s", "--sway-distance": "22px", "--bubble-opacity": "0.28", left: "62%", animationDelay: "8s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-7 h-7 bubble-cyan" style={{"--rise-duration": "24s", "--sway-duration": "5.5s", "--sway-distance": "35px", "--bubble-opacity": "0.18", left: "75%", animationDelay: "10s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-4 h-4 bubble-sky" style={{"--rise-duration": "17s", "--sway-duration": "3s", "--sway-distance": "18px", "--bubble-opacity": "0.26", left: "88%", animationDelay: "12s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-6 h-6 bubble-purple" style={{"--rise-duration": "21s", "--sway-duration": "4s", "--sway-distance": "28px", "--bubble-opacity": "0.20", left: "15%", animationDelay: "14s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-3 h-3 bubble-cyan" style={{"--rise-duration": "15s", "--sway-duration": "3s", "--sway-distance": "12px", "--bubble-opacity": "0.32", left: "40%", animationDelay: "16s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-5 h-5 bubble-sky" style={{"--rise-duration": "23s", "--sway-duration": "5s", "--sway-distance": "24px", "--bubble-opacity": "0.24", left: "70%", animationDelay: "18s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-8 h-8 bubble-purple" style={{"--rise-duration": "25s", "--sway-duration": "6s", "--sway-distance": "40px", "--bubble-opacity": "0.15", left: "5%", animationDelay: "7s"} as React.CSSProperties}></div>
-           <div className="premium-bubble w-4 h-4 bubble-cyan" style={{"--rise-duration": "19s", "--sway-duration": "4s", "--sway-distance": "20px", "--bubble-opacity": "0.27", left: "92%", animationDelay: "11s"} as React.CSSProperties}></div>
-         </div>
-         
+       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
          <div className="container mx-auto px-4 pt-20 relative z-10 flex flex-col items-center">
 
            {/* Profile Image */}
