@@ -28,9 +28,9 @@ const AboutSection = () => {
         About Me
       </h2>
       <div 
-        className={`w-20 h-1 bg-primary mx-auto mb-8 transition-all duration-1000 delay-300 ${
+        className="w-20 h-1 bg-primary mx-auto mb-8 transition-all duration-1000 delay-300 ${
           titleVisible ? 'animate-scale-in opacity-100' : 'opacity-0 scale-x-0'
-        }`}
+        }"
       />
       <p 
         ref={textRef as any}
@@ -38,10 +38,7 @@ const AboutSection = () => {
           textVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
         }`}
       >
-   Motivated developer with hands-on experience building scalable and user-friendly web applications. 
-  Skilled in RESTful API design, modern web technologies, and responsive design. Strong problem solver and collaborative 
-  team player with a focus on writing clean and efficient code. Currently pursuing a Bachelor’s degree in BSc. CSIT and 
-  seeking opportunities to contribute, learn, and grow as a develope
+        Motivated developer with hands-on experience building scalable and user-friendly web applications. Skilled in RESTful API design, modern web technologies, and responsive design. Strong problem solver and collaborative team player with a focus on writing clean and efficient code. Currently pursuing a Bachelor’s degree in BSc. CSIT and seeking opportunities to contribute, learn, and grow as a developer.
       </p>
     </>
   );
