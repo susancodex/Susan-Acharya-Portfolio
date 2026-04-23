@@ -819,11 +819,8 @@ export default function Index() {
 
            {/* Description */}
            <div className={`max-w-2xl mx-auto text-center mb-8 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-               I design and develop scalable, high-performance web applications with a strong focus on clean architecture, usability, and modern user experience.
-             </p>
-             <p className="text-base text-muted-foreground leading-relaxed">
-               Currently exploring opportunities to contribute to real-world projects, collaborate with teams, and grow as a full-stack developer.
+             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+               Motivated developer with hands-on experience building scalable and user-friendly web applications. Skilled in RESTful API design, modern web technologies, and responsive design. Strong problem solver and collaborative team player with a focus on writing clean and efficient code. Currently pursuing a Bachelor’s degree in BSc. CSIT and seeking opportunities to contribute, learn, and grow as a developer.
              </p>
            </div>
 
