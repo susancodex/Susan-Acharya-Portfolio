@@ -774,15 +774,15 @@ export default function Index() {
          
          <div className="container mx-auto px-4 pt-20 relative z-10 flex flex-col items-center">
             {/* Profile Section Background Bubbles */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] pointer-events-none overflow-hidden rounded-full opacity-30">
-              <div className="absolute w-3 h-3 top-[20%] left-[30%] bg-primary/40 rounded-full bubble-rise" style={{animationDelay: '0s'}}></div>
-              <div className="absolute w-2 h-2 top-[35%] left-[60%] bg-blue-400/50 rounded-full bubble-rise" style={{animationDelay: '0.7s'}}></div>
-              <div className="absolute w-4 h-4 top-[50%] left-[25%] bg-indigo-400/30 rounded-full bubble-rise" style={{animationDelay: '1.4s'}}></div>
-              <div className="absolute w-2 h-2 top-[65%] left-[70%] bg-cyan-400/40 rounded-full bubble-rise" style={{animationDelay: '2.1s'}}></div>
-              <div className="absolute w-3 h-3 top-[40%] left-[45%] bg-purple-400/35 rounded-full bubble-rise" style={{animationDelay: '2.8s'}}></div>
-              <div className="absolute w-2 h-2 top-[75%] left-[40%] bg-blue-300/45 rounded-full bubble-rise" style={{animationDelay: '3.5s'}}></div>
-              <div className="absolute w-3 h-3 top-[55%] left-[55%] bg-indigo-300/40 rounded-full bubble-rise" style={{animationDelay: '4.2s'}}></div>
-              <div className="absolute w-2 h-2 top-[30%] left-[40%] bg-cyan-300/50 rounded-full bubble-rise" style={{animationDelay: '4.9s'}}></div>
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] pointer-events-none opacity-20">
+              <div className="absolute w-3 h-3 top-[20%] left-[30%] bg-primary/40 rounded-full animate-bounce" style={{animationDelay: '0s', animationDuration: '3s'}}></div>
+              <div className="absolute w-2 h-2 top-[35%] left-[60%] bg-blue-400/50 rounded-full animate-bounce" style={{animationDelay: '0.5s', animationDuration: '3.5s'}}></div>
+              <div className="absolute w-4 h-4 top-[50%] left-[25%] bg-indigo-400/30 rounded-full animate-bounce" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
+              <div className="absolute w-2 h-2 top-[65%] left-[70%] bg-cyan-400/40 rounded-full animate-bounce" style={{animationDelay: '1.5s', animationDuration: '3s'}}></div>
+              <div className="absolute w-3 h-3 top-[40%] left-[45%] bg-purple-400/35 rounded-full animate-bounce" style={{animationDelay: '2s', animationDuration: '3.5s'}}></div>
+              <div className="absolute w-2 h-2 top-[75%] left-[40%] bg-blue-300/45 rounded-full animate-bounce" style={{animationDelay: '2.5s', animationDuration: '4s'}}></div>
+              <div className="absolute w-3 h-3 top-[55%] left-[55%] bg-indigo-300/40 rounded-full animate-bounce" style={{animationDelay: '3s', animationDuration: '3s'}}></div>
+              <div className="absolute w-2 h-2 top-[30%] left-[40%] bg-cyan-300/50 rounded-full animate-bounce" style={{animationDelay: '3.5s', animationDuration: '3.5s'}}></div>
             </div>
            {/* Profile Image */}
            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
