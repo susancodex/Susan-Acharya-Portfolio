@@ -199,11 +199,15 @@ const SkillsSection = () => {
 
    const skillCategories = [
      {
-       title: "💻 Programming",
+       title: "💻 Programming & Frontend",
        skills: [
          { name: "Python", icon: "https://img.icons8.com/color/48/python--v1.png" },
          { name: "SQL", icon: "https://img.icons8.com/color/48/sql.png" },
-         { name: "Java (Basic)", icon: "https://img.icons8.com/color/48/java-coffee-cup-logo.png" }
+         { name: "Java (Basic)", icon: "https://img.icons8.com/color/48/java-coffee-cup-logo.png" },
+         { name: "React", icon: "https://img.icons8.com/color/48/react-native.png" },
+         { name: "Vite", icon: "https://vitejs.dev/logo.svg" },
+         { name: "Tailwind CSS", icon: "https://img.icons8.com/color/48/tailwind_css.png" },
+         { name: "Bootstrap", icon: "https://img.icons8.com/color/48/bootstrap.png" }
        ]
      },
      {
