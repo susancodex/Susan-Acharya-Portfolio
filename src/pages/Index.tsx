@@ -197,59 +197,61 @@ const SkillsSection = () => {
     "[animation-delay:500ms]",
   ];
 
-  const skillCategories = [
-    {
-      title: "💻 Frontend",
-      skills: [
-        { name: "HTML5", icon: "https://img.icons8.com/color/48/html-5--v1.png" },
-        { name: "CSS3", icon: "https://img.icons8.com/color/48/css3.png" },
-        { name: "JavaScript", icon: "https://img.icons8.com/color/48/javascript--v1.png" },
-        { name: "Bootstrap", icon: "https://img.icons8.com/color/48/bootstrap.png" },
-        { name: "Responsive Design", icon: "https://img.icons8.com/fluency/48/responsive.png" }
-      ]
-    },
-    {
-      title: "🛠️ Backend",
-      skills: [
-        { name: "Python", icon: "https://img.icons8.com/color/48/python--v1.png" },
-        { name: "Django", icon: "https://img.icons8.com/color/48/django.png" },
-        { name: "Django REST Framework", icon: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" },
-        { name: "RESTful APIs", icon: "https://img.icons8.com/ios-filled/48/api-settings.png" }
-      ]
-    },
-    {
-      title: "🗄️ Databases",
-      skills: [
-        { name: "MySQL", icon: "https://img.icons8.com/color/48/mysql-logo.png" },
-        { name: "SQLite3", icon: "https://img.icons8.com/color/48/sqlite.png" }
-      ]
-    },
-    {
-      title: "🧰 Tools",
-      skills: [
-        { name: "Git", icon: "https://img.icons8.com/color/48/git.png" },
-        { name: "GitHub", icon: "https://img.icons8.com/ios-glyphs/48/github.png" },
-        { name: "Visual Studio Code", icon: "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
-        { name: "PyCharm", icon: "https://img.icons8.com/color/48/pycharm.png" }
-      ]
-    },
-    {
-      title: "🔗 APIs",
-      skills: [
-        { name: "REST API Design", icon: "https://img.icons8.com/ios-filled/48/api-settings.png" },
-        { name: "API Integration", icon: "https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/48/external-api-user-interface-icongeek26-linear-colour-icongeek26.png" }
-      ]
-    },
-    {
-      title: "💡 Soft Skills",
-      skills: [
-        { name: "Problem Solving", icon: "🧠" },
-        { name: "Team Collaboration", icon: "🤝" },
-        { name: "Communication", icon: "🗣️" },
-        { name: "Adaptability", icon: "🔄" }
-      ]
-    }
-  ];
+   const skillCategories = [
+     {
+       title: "💻 Programming",
+       skills: [
+         { name: "Python", icon: "https://img.icons8.com/color/48/python--v1.png" },
+         { name: "SQL", icon: "https://img.icons8.com/color/48/sql.png" },
+         { name: "Java (Basic)", icon: "https://img.icons8.com/color/48/java-coffee-cup-logo.png" }
+       ]
+     },
+     {
+       title: "🛠️ Backend",
+       skills: [
+         { name: "Django", icon: "https://img.icons8.com/color/48/django.png" },
+         { name: "Django REST Framework", icon: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" },
+         { name: "RESTful APIs", icon: "https://img.icons8.com/ios-filled/48/api-settings.png" }
+       ]
+     },
+     {
+       title: "🗄️ Databases",
+       skills: [
+         { name: "MySQL", icon: "https://img.icons8.com/color/48/mysql-logo.png" },
+         { name: "SQLite", icon: "https://img.icons8.com/color/48/sqlite.png" },
+         { name: "PostgreSQL", icon: "https://img.icons8.com/color/48/postgreesql.png" }
+       ]
+     },
+     {
+       title: "📋 Concepts",
+       skills: [
+         { name: "Software Requirements Analysis", icon: "📝" },
+         { name: "Unit Testing", icon: "✅" },
+         { name: "System Design Basics", icon: "🏗️" }
+       ]
+     },
+     {
+       title: "🧰 Tools",
+       skills: [
+         { name: "Git", icon: "https://img.icons8.com/color/48/git.png" },
+         { name: "GitHub", icon: "https://img.icons8.com/ios-glyphs/48/github.png" },
+         { name: "Postman", icon: "https://img.icons8.com/dusk/48/postman-api.png" },
+         { name: "Docker", icon: "https://img.icons8.com/color/48/docker.png" },
+         { name: "VS Code", icon: "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
+         { name: "PyCharm", icon: "https://img.icons8.com/color/48/pycharm.png" }
+       ]
+     },
+     {
+       title: "💡 Soft Skills",
+       skills: [
+         { name: "Analytical Thinking", icon: "🧠" },
+         { name: "Problem-solving", icon: "🎯" },
+         { name: "Teamwork", icon: "🤝" },
+         { name: "Communication", icon: "🗣️" },
+         { name: "Adaptability", icon: "🔄" }
+       ]
+     }
+   ];
 
   return (
     <>
