@@ -700,6 +700,27 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
+       {/* Global Animated Bubble Background — visible behind every section */}
+       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+         <div className="absolute top-[10%] left-[8%] w-80 h-80 bg-gradient-to-br from-indigo-400/15 to-blue-400/8 rounded-full bg-orb blur-3xl opacity-40"></div>
+         <div className="absolute top-[40%] right-[5%] w-96 h-96 bg-gradient-to-br from-purple-400/12 to-cyan-400/8 rounded-full bg-orb-2 blur-3xl opacity-35"></div>
+         <div className="absolute bottom-[10%] left-[25%] w-72 h-72 bg-gradient-to-br from-cyan-400/10 to-blue-400/5 rounded-full bg-orb-3 blur-3xl opacity-30"></div>
+         <div className="absolute top-[65%] left-[55%] w-80 h-80 bg-gradient-to-br from-pink-400/10 to-purple-400/5 rounded-full bg-orb-4 blur-3xl opacity-25"></div>
+
+         <div className="premium-bubble w-4 h-4 bubble-sky" style={{"--rise-duration": "18s", "--sway-duration": "4s", "--sway-distance": "20px", "--bubble-opacity": "0.25", left: "6%", animationDelay: "0s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-8 h-8 bubble-purple" style={{"--rise-duration": "22s", "--sway-duration": "5s", "--sway-distance": "30px", "--bubble-opacity": "0.20", left: "14%", animationDelay: "2s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-3 h-3 bubble-cyan" style={{"--rise-duration": "16s", "--sway-duration": "3.5s", "--sway-distance": "15px", "--bubble-opacity": "0.30", left: "22%", animationDelay: "4s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-6 h-6 bubble-sky" style={{"--rise-duration": "20s", "--sway-duration": "4.5s", "--sway-distance": "25px", "--bubble-opacity": "0.22", left: "30%", animationDelay: "6s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-5 h-5 bubble-purple" style={{"--rise-duration": "19s", "--sway-duration": "4s", "--sway-distance": "22px", "--bubble-opacity": "0.28", left: "38%", animationDelay: "1s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-7 h-7 bubble-cyan" style={{"--rise-duration": "24s", "--sway-duration": "5.5s", "--sway-distance": "35px", "--bubble-opacity": "0.18", left: "46%", animationDelay: "10s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-4 h-4 bubble-sky" style={{"--rise-duration": "17s", "--sway-duration": "3s", "--sway-distance": "18px", "--bubble-opacity": "0.26", left: "54%", animationDelay: "3s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-6 h-6 bubble-purple" style={{"--rise-duration": "21s", "--sway-duration": "4s", "--sway-distance": "28px", "--bubble-opacity": "0.20", left: "62%", animationDelay: "14s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-3 h-3 bubble-cyan" style={{"--rise-duration": "15s", "--sway-duration": "3s", "--sway-distance": "12px", "--bubble-opacity": "0.32", left: "70%", animationDelay: "5s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-5 h-5 bubble-sky" style={{"--rise-duration": "23s", "--sway-duration": "5s", "--sway-distance": "24px", "--bubble-opacity": "0.24", left: "78%", animationDelay: "9s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-8 h-8 bubble-purple" style={{"--rise-duration": "25s", "--sway-duration": "6s", "--sway-distance": "40px", "--bubble-opacity": "0.15", left: "86%", animationDelay: "7s"} as React.CSSProperties}></div>
+         <div className="premium-bubble w-4 h-4 bubble-cyan" style={{"--rise-duration": "19s", "--sway-duration": "4s", "--sway-distance": "20px", "--bubble-opacity": "0.27", left: "94%", animationDelay: "11s"} as React.CSSProperties}></div>
+       </div>
+
        {/* Navigation */}
        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-border/50 shadow-sm">
          <div className="container mx-auto px-4 py-4">
