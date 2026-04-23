@@ -46,6 +46,125 @@ const AboutSection = () => {
   );
 };
 
+
+// Featured Projects Section Component
+const FeaturedProjectsSection = () => {
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
+  const [containerRef, visibleItems] = useStaggerAnimation(3, 200);
+
+  const projects = [
+    {
+      image: financeTrackerImg,
+      title: "Finance Tracker",
+      description:
+        "A full-stack personal finance management web application built with React + Vite (frontend) and Django REST Framework (backend). Track income and expenses, manage categories, set monthly budget limits, and work toward financial goals — all from a clean, mobile-friendly interface.",
+      github: "https://github.com/susancodex/Finance_Tracker.git",
+      liveDemo: "https://finance-tracker-frontend-zeid.onrender.com",
+      tags: ["React", "Vite", "Django REST", "Full-Stack"],
+    },
+    {
+      image: taskManagerImg,
+      title: "Task Manager API",
+      description:
+        "A RESTful API built with Django REST Framework for task creation, management, authentication, and status tracking with clean backend architecture.",
+      github: "https://github.com/susancodex/task-manager-api.git",
+      liveDemo: "https://task-manager-api-x87n.onrender.com",
+      tags: ["Django REST", "Python", "API", "Backend"],
+    },
+    {
+      image: todoListImg,
+      title: "To Do List",
+      description:
+        "A simple, user-authenticated To-Do List web application built with Django. Users can register, log in, and manage their personal tasks with a clean and responsive interface.",
+      github: "https://github.com/susancodex/todo-list.git",
+      liveDemo: null,
+      tags: ["Django", "Python", "Authentication", "Web App"],
+    },
+  ];
+
+  return (
+    <>
+      <h2
+        ref={titleRef as any}
+        className={`text-4xl font-bold text-center mb-4 transition-all duration-1000 ${
+          titleVisible ? "animate-fade-in-down opacity-100" : "opacity-0 -translate-y-8"
+        }`}
+      >
+        Featured Projects
+      </h2>
+      <div
+        className={`w-20 h-1 bg-primary mx-auto mb-12 transition-all duration-1000 delay-300 ${
+          titleVisible ? "animate-scale-in opacity-100" : "opacity-0 scale-x-0"
+        }`}
+      />
+
+      <div ref={containerRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={project.title}
+            className={`group relative flex flex-col bg-card rounded-2xl overflow-hidden border border-border shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ${
+              visibleItems[index] ? "animate-fade-in-up opacity-100" : "opacity-0 translate-y-8"
+            }`}
+          >
+            {/* Project Image */}
+            <div className="relative overflow-hidden h-48 bg-muted">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+
+            {/* Card Content */}
+            <div className="flex flex-col flex-1 p-6">
+              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                {project.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-5">
+                {project.tags.map((tag) => (
+                  <Badge key={tag} variant="secondary" className="text-xs px-2 py-1">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex gap-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105"
+                  onClick={() => window.open(project.github, "_blank")}
+                >
+                  <Github className="h-4 w-4 mr-2" />
+                  View Code
+                </Button>
+                {project.liveDemo && (
+                  <Button
+                    size="sm"
+                    className="flex-1 hover:scale-105 transition-transform duration-300"
+                    onClick={() => window.open(project.liveDemo!, "_blank")}
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Live Demo
+                  </Button>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+
 // Skills Section Component with category animations
 const SkillsSection = () => {
   const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
@@ -420,122 +539,6 @@ const LanguagesAchievementsSection = () => {
   );
 };
 
-// Featured Projects Section Component
-const FeaturedProjectsSection = () => {
-  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
-  const [containerRef, visibleItems] = useStaggerAnimation(3, 200);
-
-  const projects = [
-    {
-      image: financeTrackerImg,
-      title: "Finance Tracker",
-      description:
-        "A full-stack personal finance management web application built with React + Vite (frontend) and Django REST Framework (backend). Track income and expenses, manage categories, set monthly budget limits, and work toward financial goals — all from a clean, mobile-friendly interface.",
-      github: "https://github.com/susancodex/Finance_Tracker.git",
-      liveDemo: "https://finance-tracker-frontend-zeid.onrender.com",
-      tags: ["React", "Vite", "Django REST", "Full-Stack"],
-    },
-    {
-      image: taskManagerImg,
-      title: "Task Manager API",
-      description:
-        "A RESTful API built with Django REST Framework for task creation, management, authentication, and status tracking with clean backend architecture.",
-      github: "https://github.com/susancodex/task-manager-api.git",
-      liveDemo: "https://task-manager-api-x87n.onrender.com",
-      tags: ["Django REST", "Python", "API", "Backend"],
-    },
-    {
-      image: todoListImg,
-      title: "To Do List",
-      description:
-        "A simple, user-authenticated To-Do List web application built with Django. Users can register, log in, and manage their personal tasks with a clean and responsive interface.",
-      github: "https://github.com/susancodex/todo-list.git",
-      liveDemo: null,
-      tags: ["Django", "Python", "Authentication", "Web App"],
-    },
-  ];
-
-  return (
-    <>
-      <h2
-        ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-4 transition-all duration-1000 ${
-          titleVisible ? "animate-fade-in-down opacity-100" : "opacity-0 -translate-y-8"
-        }`}
-      >
-        Featured Projects
-      </h2>
-      <div
-        className={`w-20 h-1 bg-primary mx-auto mb-12 transition-all duration-1000 delay-300 ${
-          titleVisible ? "animate-scale-in opacity-100" : "opacity-0 scale-x-0"
-        }`}
-      />
-
-      <div ref={containerRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {projects.map((project, index) => (
-          <div
-            key={project.title}
-            className={`group relative flex flex-col bg-card rounded-2xl overflow-hidden border border-border shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ${
-              visibleItems[index] ? "animate-fade-in-up opacity-100" : "opacity-0 translate-y-8"
-            }`}
-          >
-            {/* Project Image */}
-            <div className="relative overflow-hidden h-48 bg-muted">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
-
-            {/* Card Content */}
-            <div className="flex flex-col flex-1 p-6">
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
-                {project.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                {project.description}
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5">
-                {project.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary" className="text-xs px-2 py-1">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-
-              {/* Buttons */}
-              <div className="flex gap-3">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open(project.github, "_blank")}
-                >
-                  <Github className="h-4 w-4 mr-2" />
-                  View Code
-                </Button>
-                {project.liveDemo && (
-                  <Button
-                    size="sm"
-                    className="flex-1 hover:scale-105 transition-transform duration-300"
-                    onClick={() => window.open(project.liveDemo!, "_blank")}
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </Button>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
 
 // Contact Section Component
 const ContactSection = ({ handleContactSubmit }: { handleContactSubmit: (e: React.FormEvent) => void }) => {
