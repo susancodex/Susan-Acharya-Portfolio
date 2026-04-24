@@ -201,7 +201,7 @@ const SkillsSection = () => {
 
    const skillCategories = [
      {
-       title: "💻 Programming & Frontend",
+       title: "Programming & Frontend",
        skills: [
          { name: "Python", icon: "https://img.icons8.com/color/48/python--v1.png" },
          { name: "SQL", icon: "https://img.icons8.com/color/48/sql.png" },
@@ -213,7 +213,7 @@ const SkillsSection = () => {
        ]
      },
      {
-       title: "🛠️ Backend",
+       title: "Backend",
        skills: [
          { name: "Django", icon: "https://img.icons8.com/color/48/django.png" },
          { name: "Django REST Framework", icon: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" },
@@ -221,7 +221,7 @@ const SkillsSection = () => {
        ]
      },
      {
-       title: "🗄️ Databases",
+       title: "Databases",
        skills: [
          { name: "MySQL", icon: "https://img.icons8.com/color/48/mysql-logo.png" },
          { name: "SQLite", icon: "https://img.icons8.com/color/48/sqlite.png" },
@@ -229,7 +229,7 @@ const SkillsSection = () => {
        ]
      },
      {
-       title: "📋 Concepts",
+       title: "Concepts",
        skills: [
          { name: "Software Requirements Analysis", icon: "📝" },
          { name: "Unit Testing", icon: "✅" },
@@ -237,7 +237,7 @@ const SkillsSection = () => {
        ]
      },
      {
-       title: "🧰 Tools",
+       title: "Tools",
        skills: [
          { name: "Git", icon: "https://img.icons8.com/color/48/git.png" },
          { name: "GitHub", icon: "https://img.icons8.com/ios-glyphs/48/github.png" },
@@ -248,7 +248,7 @@ const SkillsSection = () => {
        ]
      },
      {
-       title: "💡 Soft Skills",
+       title: "Soft Skills",
        skills: [
          { name: "Analytical Thinking", icon: "🧠" },
          { name: "Problem-solving", icon: "🎯" },
