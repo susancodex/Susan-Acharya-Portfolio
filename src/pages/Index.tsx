@@ -323,14 +323,18 @@ const EducationSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">Academic Background</span>
+      </div>
       <h2 
         ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-12 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center mb-4 transition-all duration-1000 ${
           titleVisible ? 'animate-fade-in-down opacity-100' : 'opacity-0 -translate-y-8'
         }`}
       >
-        🎓 Education
+        Education
       </h2>
+      <div className="section-divider mb-12" />
       
       <div ref={containerRef as any} className="max-w-4xl mx-auto">
        <Card className={`glass-card transition-all duration-700 hover:shadow-xl hover:-translate-y-2 ${
