@@ -732,28 +732,38 @@ export default function Index() {
        </div>
 
        {/* Navigation */}
-       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-border/50 shadow-sm">
-         <div className="container mx-auto px-4 py-4">
+       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/75 backdrop-blur-xl border-b border-border/60">
+         <div className="container mx-auto px-4 py-3.5">
            <div className="flex justify-between items-center">
-             <h1 className="text-xl font-bold gradient-text">Susan Acharya</h1>
+             <button onClick={() => scrollToSection('about')} className="flex items-center gap-2 group">
+               <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-foreground text-background text-sm font-semibold tracking-tight">SA</span>
+               <span className="text-sm font-medium tracking-tight text-foreground/90 group-hover:text-foreground transition-colors">Susan Acharya</span>
+             </button>
              
              {/* Desktop Navigation */}
-             <div className="hidden md:flex items-center gap-8">
+             <div className="hidden md:flex items-center gap-7">
                {["about", "skills", "projects", "education", "contact"].map((item) => (
                  <button
                    key={item}
                    onClick={() => scrollToSection(item)}
-                   className="text-muted-foreground hover:text-foreground transition-all duration-300 capitalize relative group"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 capitalize relative group"
                  >
                    {item}
-                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full"></span>
                  </button>
                ))}
+               <Button
+                 size="sm"
+                 className="btn-primary !px-5 !py-2 !text-sm"
+                 onClick={() => scrollToSection('contact')}
+               >
+                 Hire Me
+               </Button>
              </div>
              
              {/* Mobile Menu Button */}
              <button 
-               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-foreground"
                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
              >
                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
