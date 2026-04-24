@@ -630,66 +630,59 @@ const ContactSection = ({ handleContactSubmit }: { handleContactSubmit: (e: Reac
         <div className={`transition-all duration-700 ${
           visibleItems[0] ? 'animate-fade-in-left opacity-100' : 'opacity-0 -translate-x-8'
         }`}>
-          <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
-          <p className="text-muted-foreground mb-8">
+          <h3 className="text-xl font-semibold tracking-tight mb-3 text-foreground">Let’s Connect</h3>
+          <p className="text-muted-foreground mb-8 leading-relaxed">
             I'm always interested in new opportunities and collaborations. 
             Feel free to reach out if you'd like to discuss a project or just say hello!
           </p>
           
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-              <Mail className="h-5 w-5 text-primary animate-bounce-gentle" />
-              <span>susanacharya.sp@gmail.com</span>
-            </div>
-            <div className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-              <Phone className="h-5 w-5 text-primary animate-bounce-gentle [animation-delay:200ms]" />
-              <span>+977 9824562967</span>
-            </div>
-             <div className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-               <MapPin className="h-5 w-5 text-primary animate-bounce-gentle [animation-delay:400ms]" />
-               <span>Kathmandu, Nepal</span>
-             </div>
+          <div className="space-y-1">
+            {[
+              { icon: Mail, label: "Email", value: "susanacharya.sp@gmail.com", href: "mailto:susanacharya.sp@gmail.com" },
+              { icon: Phone, label: "Phone", value: "+977 9824562967", href: "tel:+9779824562967" },
+              { icon: MapPin, label: "Location", value: "Kathmandu, Nepal", href: null },
+            ].map(({ icon: Icon, label, value, href }) => {
+              const content = (
+                <>
+                  <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-muted border border-border group-hover:bg-foreground group-hover:text-background transition-colors">
+                    <Icon className="h-4 w-4" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{label}</div>
+                    <div className="text-sm font-medium text-foreground">{value}</div>
+                  </div>
+                </>
+              );
+              return href ? (
+                <a key={label} href={href} className="flex items-center gap-4 py-3 border-b border-border/60 last:border-0 group">
+                  {content}
+                </a>
+              ) : (
+                <div key={label} className="flex items-center gap-4 py-3 border-b border-border/60 last:border-0 group">
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Contact Form */}
-        <Card className={`transition-all duration-700 hover:shadow-xl ${
+        <Card className={`surface-card transition-all duration-500 ${
           visibleItems[1] ? 'animate-fade-in-right opacity-100' : 'opacity-0 translate-x-8'
         }`}>
-          <CardHeader>
-            <CardTitle>Send Message</CardTitle>
-            <CardDescription>I'll get back to you as soon as possible</CardDescription>
+          <CardHeader className="border-b border-border/60">
+            <CardTitle className="text-base font-semibold tracking-tight">Send a message</CardTitle>
+            <CardDescription className="text-sm">I’ll get back to you within 24 hours.</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-6">
             <form onSubmit={handleContactSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input 
-                  placeholder="Your Name" 
-                  required 
-                  className="hover:border-primary/50 focus:border-primary transition-colors"
-                />
-                <Input 
-                  type="email" 
-                  placeholder="Your Email" 
-                  required 
-                  className="hover:border-primary/50 focus:border-primary transition-colors"
-                />
+                <Input placeholder="Name" required className="h-11 bg-background border-border" />
+                <Input type="email" placeholder="Email" required className="h-11 bg-background border-border" />
               </div>
-              <Input 
-                placeholder="Subject" 
-                required 
-                className="hover:border-primary/50 focus:border-primary transition-colors"
-              />
-              <Textarea 
-                placeholder="Your Message" 
-                rows={5} 
-                required 
-                className="hover:border-primary/50 focus:border-primary transition-colors"
-              />
-              <Button 
-                type="submit" 
-                className="w-full hover:scale-105 transition-transform duration-300 animate-button-glow"
-              >
+              <Input placeholder="Subject" required className="h-11 bg-background border-border" />
+              <Textarea placeholder="Message" rows={5} required className="bg-background border-border resize-none" />
+              <Button type="submit" className="btn-primary w-full">
                 Send Message
               </Button>
             </form>
