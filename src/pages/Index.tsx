@@ -930,32 +930,37 @@ export default function Index() {
       </section>
 
       {/* Certificates Section */}
-      <section className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
+      <section className="py-20 md:py-28 bg-background/60 backdrop-blur-sm border-y border-border/40 relative z-10">
         <div className="container mx-auto px-4">
           <CertificatesSection />
         </div>
       </section>
 
       {/* Languages & Achievements */}
-      <section className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
+      <section className="py-20 md:py-28 relative z-10">
         <div className="container mx-auto px-4">
           <LanguagesAchievementsSection />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 relative z-10">
+      <section id="contact" className="py-20 md:py-28 bg-background/60 backdrop-blur-sm border-y border-border/40 relative z-10">
         <div className="container mx-auto px-4">
           <ContactSection handleContactSubmit={handleContactSubmit} />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white/60 backdrop-blur-sm border-t border-sky-100 py-8 relative z-10">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground">
-            © 2024 Susan Acharya. All rights reserved.
+      <footer className="bg-background/80 backdrop-blur-sm border-t border-border py-10 relative z-10">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Susan Acharya. Crafted with care.
           </p>
+          <div className="flex items-center gap-4">
+            <a href="https://github.com/susancodex" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors"><Github className="h-4 w-4" /></a>
+            <a href="https://www.linkedin.com/in/susan-acharya1618" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors"><Linkedin className="h-4 w-4" /></a>
+            <a href="mailto:susanacharya.sp@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors"><Mail className="h-4 w-4" /></a>
+          </div>
         </div>
       </footer>
     </div>
