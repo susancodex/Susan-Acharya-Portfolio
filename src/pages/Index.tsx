@@ -90,19 +90,20 @@ const FeaturedProjectsSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">Selected Work</span>
+      </div>
       <h2
         ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-4 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center mb-4 transition-all duration-1000 ${
           titleVisible ? "animate-fade-in-down opacity-100" : "opacity-0 -translate-y-8"
         }`}
       >
         Featured Projects
       </h2>
-      <div
-        className={`w-20 h-1 bg-primary mx-auto mb-12 transition-all duration-1000 delay-300 ${
-          titleVisible ? "animate-scale-in opacity-100" : "opacity-0 scale-x-0"
-        }`}
-      />
+      <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+        A selection of full-stack and backend projects that demonstrate clean architecture, REST API design, and production-ready UX.
+      </p>
 
        <div ref={containerRef as any} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {projects.map((project, index) => (
