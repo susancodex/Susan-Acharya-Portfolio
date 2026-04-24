@@ -427,98 +427,115 @@ const CertificatesSection = () => {
       </h2>
       
        <div ref={containerRef as any} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-         <Card className={`glass-card transition-all duration-700 hover:shadow-xl hover:-translate-y-2 ${
+         <Card className={`surface-card transition-all duration-500 hover:-translate-y-1 ${
            visibleItems[0] ? 'animate-fade-in-left opacity-100' : 'opacity-0 -translate-x-8'
          }`}>
           <CardHeader>
-            <CardTitle className="flex items-center space-x-3 text-xl">
-              <span className="text-2xl">✅</span>
-              <span>Python For Beginners – Learn All The Basics Of Python</span>
+            <div className="flex items-center justify-between mb-3">
+              <span className="eyebrow !text-[10px]">Udemy</span>
+              <span className="font-mono text-xs text-muted-foreground">01</span>
+            </div>
+            <CardTitle className="text-base font-semibold tracking-tight leading-snug">
+              Python For Beginners – Learn All The Basics Of Python
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
               This course covers Python essentials like variables, data types, operators, conditional statements, loops, functions, and key data structures such as lists, tuples, dictionaries, and sets.
             </p>
             <Button 
-              variant="outline" 
-              className="w-full"
+              variant="ghost" 
+              size="sm"
+              className="w-full justify-between hover:bg-muted text-foreground border border-border"
               onClick={() => window.open("https://www.udemy.com/certificate/UC-fa0f1b21-29d8-4950-b675-abeaf438dbc7/", "_blank")}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              View Certificate
+              <span className="text-xs font-medium">View Certificate</span>
+              <ExternalLink className="h-3.5 w-3.5" />
             </Button>
           </CardContent>
         </Card>
 
-         <Card className={`glass-card transition-all duration-700 hover:shadow-xl hover:-translate-y-2 ${
+         <Card className={`surface-card transition-all duration-500 hover:-translate-y-1 ${
            visibleItems[1] ? 'animate-fade-in-right opacity-100' : 'opacity-0 translate-x-8'
          }`}>
           <CardHeader>
-            <CardTitle className="flex items-center space-x-3 text-xl">
-              <span className="text-2xl">✅</span>
-              <span>Python For Data Science – Real Time Exercises</span>
+            <div className="flex items-center justify-between mb-3">
+              <span className="eyebrow !text-[10px]">Udemy</span>
+              <span className="font-mono text-xs text-muted-foreground">02</span>
+            </div>
+            <CardTitle className="text-base font-semibold tracking-tight leading-snug">
+              Python For Data Science – Real Time Exercises
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
               Learn Python for Data Science through real-time exercises. Practice with variables, control flow, data structures, NumPy, and basic statistics to analyze and manipulate data efficiently.
             </p>
             <Button 
-              variant="outline" 
-              className="w-full"
+              variant="ghost" 
+              size="sm"
+              className="w-full justify-between hover:bg-muted text-foreground border border-border"
               onClick={() => window.open("https://www.udemy.com/certificate/UC-175f7a52-2f5f-486c-a9d4-039f953669ef/", "_blank")}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              View Certificate
+              <span className="text-xs font-medium">View Certificate</span>
+              <ExternalLink className="h-3.5 w-3.5" />
             </Button>
           </CardContent>
         </Card>
 
-        <Card className={`transition-all duration-700 hover:shadow-lg hover:-translate-y-1 ${
+        <Card className={`surface-card transition-all duration-500 hover:-translate-y-1 ${
           visibleItems[2] ? 'animate-fade-in-left opacity-100' : 'opacity-0 -translate-x-8'
         }`}>
           <CardHeader>
-            <CardTitle className="flex items-center space-x-3 text-xl">
-              <span className="text-2xl">✅</span>
-              <span>Python Programming : Python Bootcamp For Beginners</span>
+            <div className="flex items-center justify-between mb-3">
+              <span className="eyebrow !text-[10px]">Udemy</span>
+              <span className="font-mono text-xs text-muted-foreground">03</span>
+            </div>
+            <CardTitle className="text-base font-semibold tracking-tight leading-snug">
+              Python Programming : Python Bootcamp For Beginners
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
               An introductory course covering core Python concepts including variables, data types, operators, control flow, functions, and data structures to build a solid foundation in programming.
             </p>
             <Button 
-              variant="outline" 
-              className="w-full"
+              variant="ghost" 
+              size="sm"
+              className="w-full justify-between hover:bg-muted text-foreground border border-border"
               onClick={() => window.open("https://www.udemy.com/certificate/UC-0bffe5ad-cd58-40fd-ab5d-a536fd3c6837/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com", "_blank")}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              View Certificate
+              <span className="text-xs font-medium">View Certificate</span>
+              <ExternalLink className="h-3.5 w-3.5" />
             </Button>
           </CardContent>
         </Card>
 
-        <Card className={`transition-all duration-700 hover:shadow-lg hover:-translate-y-1 ${
+        <Card className={`surface-card transition-all duration-500 hover:-translate-y-1 ${
           visibleItems[3] ? 'animate-fade-in-right opacity-100' : 'opacity-0 translate-x-8'
         }`}>
           <CardHeader>
-            <CardTitle className="flex items-center space-x-3 text-xl">
-              <span className="text-2xl">🏆</span>
-              <span>Hackathon Certificate</span>
+            <div className="flex items-center justify-between mb-3">
+              <span className="eyebrow !text-[10px]">Code Yantra</span>
+              <span className="font-mono text-xs text-muted-foreground">04</span>
+            </div>
+            <CardTitle className="text-base font-semibold tracking-tight leading-snug flex items-center gap-2">
+              <Trophy className="h-4 w-4 text-foreground/60" />
+              Hackathon Participation
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
               Participated in a 48-hour hackathon organized by Code Yantra at Himalayan College of Engineering, showcasing problem-solving and teamwork skills under time constraints
             </p>
             <Button 
-              variant="outline" 
-              className="w-full"
+              variant="ghost" 
+              size="sm"
+              className="w-full justify-between hover:bg-muted text-foreground border border-border"
               onClick={() => window.open("https://www.linkedin.com/in/susan-acharya1618?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank")}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              LinkedIn Proof
+              <span className="text-xs font-medium">View on LinkedIn</span>
+              <ExternalLink className="h-3.5 w-3.5" />
             </Button>
           </CardContent>
         </Card>
