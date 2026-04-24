@@ -109,66 +109,71 @@ const FeaturedProjectsSection = () => {
         {projects.map((project, index) => (
            <div
              key={project.title}
-             className={`group relative flex flex-col glass-card rounded-2xl overflow-hidden card-glow ${
+             className={`group relative flex flex-col surface-card overflow-hidden ${
                visibleItems[index] ? "animate-fade-in-up opacity-100" : "opacity-0 translate-y-8"
              }`}
            >
             {/* Project Image */}
-            <div className="relative overflow-hidden h-48 bg-muted">
+            <div className="relative overflow-hidden h-44 bg-muted border-b border-border/60">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="absolute top-3 left-3 inline-flex items-center justify-center h-7 min-w-7 px-2 rounded-full bg-background/90 backdrop-blur text-[11px] font-mono font-medium text-muted-foreground border border-border">
+                {String(index + 1).padStart(2, '0')}
+              </span>
             </div>
 
             {/* Card Content */}
-            <div className="flex flex-col flex-1 p-6">
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+            <div className="flex flex-col flex-1 p-5">
+              <h3 className="text-lg font-semibold tracking-tight mb-2 text-foreground">
                 {project.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-4">
                 {project.description}
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5">
+              <div className="flex flex-wrap gap-1.5 mb-4">
                 {project.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary" className="text-xs px-2 py-1">
+                  <span key={tag} className="text-[11px] px-2 py-0.5 rounded-md bg-muted text-muted-foreground border border-border/60 font-medium">
                     {tag}
-                  </Badge>
+                  </span>
                 ))}
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-3">
+              <div className="flex gap-2 pt-3 border-t border-border/60">
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   size="sm"
-                  className="flex-1 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105"
+                  className="flex-1 h-8 text-xs hover:bg-muted text-muted-foreground hover:text-foreground"
                   onClick={() => window.open(project.github, "_blank")}
                 >
-                  <Github className="h-4 w-4 mr-2" />
-                  View Code
+                  <Github className="h-3.5 w-3.5 mr-1.5" />
+                  Code
                 </Button>
                 {project.liveDemo ? (
                   <Button
+                    variant="ghost"
                     size="sm"
-                    className="flex-1 hover:scale-105 transition-transform duration-300"
+                    className="flex-1 h-8 text-xs hover:bg-muted text-foreground"
                     onClick={() => window.open(project.liveDemo!, "_blank")}
                   >
-                    <ExternalLink className="h-4 w-4 mr-2" />
+                    <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
                     Live Demo
                   </Button>
                 ) : (
                   <Button
+                    variant="ghost"
                     size="sm"
                     disabled
-                    className="flex-1 bg-sky-100 text-sky-700 hover:bg-sky-100 hover:text-sky-700 opacity-100 cursor-default"
+                    className="flex-1 h-8 text-xs text-muted-foreground/60 cursor-default"
                   >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Coming Soon
+                    <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                    Soon
                   </Button>
                 )}
               </div>
