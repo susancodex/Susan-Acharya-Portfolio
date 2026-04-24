@@ -344,27 +344,37 @@ const EducationSection = () => {
       <div className="section-divider mb-12" />
       
       <div ref={containerRef as any} className="max-w-4xl mx-auto">
-       <Card className={`glass-card transition-all duration-700 hover:shadow-xl hover:-translate-y-2 ${
+       <Card className={`surface-card transition-all duration-500 ${
            containerVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
          }`}>
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-3 text-2xl">
-              <GraduationCap className="h-8 w-8 text-primary animate-bounce-gentle" />
-              <span>BSc. Computer Science and Information Technology</span>
-            </CardTitle>
-            <CardDescription className="text-lg">
-              Bhaktapur Multiple Campus, Tribhuvan University (IOST) • 📍 Currently Pursuing
-            </CardDescription>
+          <CardHeader className="border-b border-border/60">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 h-12 w-12 rounded-xl bg-foreground text-background flex items-center justify-center">
+                <GraduationCap className="h-6 w-6" />
+              </div>
+              <div className="flex-1">
+                <CardTitle className="text-xl md:text-2xl font-semibold tracking-tight">
+                  BSc. Computer Science and Information Technology
+                </CardTitle>
+                <CardDescription className="text-sm mt-2 flex flex-wrap items-center gap-2">
+                  <span>Bhaktapur Multiple Campus, Tribhuvan University (IOST)</span>
+                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 text-xs font-medium border border-emerald-500/20">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                    Currently Pursuing
+                  </span>
+                </CardDescription>
+              </div>
+            </div>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="border-l-4 border-primary pl-6 py-4 bg-primary/5 rounded-r-lg">
-              <p className="text-base leading-relaxed mb-4">
+          <CardContent className="space-y-6 pt-6">
+            <div>
+              <p className="text-base leading-relaxed mb-6 text-muted-foreground">
                 The BSc. CSIT program is a four-year undergraduate degree blending theoretical knowledge and practical skills in computing, software development, and IT. It prepares students for both advanced studies and professional careers in the tech industry.
               </p>
               
               <div>
-                <h4 className="font-bold text-lg mb-4 text-primary">Core Subjects:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-4">Core Subjects</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {[
                     "Data Structures & Algorithms",
                     "Web Technologies", 
@@ -379,18 +389,19 @@ const EducationSection = () => {
                     ".NET",
                     "Computer Architecture"
                   ].map((subject, index) => (
-                    <div key={subject} className="flex items-center space-x-2 p-2 rounded-lg bg-background/50 hover:bg-muted transition-all duration-300">
-                      <span className="text-primary">•</span>
-                      <span className="text-sm font-medium">{subject}</span>
+                    <div key={subject} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/40 border border-border/60 hover:bg-muted hover:border-foreground/20 transition-colors">
+                      <span className="h-1 w-1 rounded-full bg-muted-foreground"></span>
+                      <span className="text-xs font-medium text-foreground/90">{subject}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
             
-            <div className="border-l-4 border-secondary pl-6 py-4 bg-secondary/5 rounded-r-lg">
-              <h4 className="font-bold text-lg mb-2">+2 Science</h4>
-              <p className="text-muted-foreground">Sudurpaschimanchal Academy</p>
+            <div className="border-t border-border/60 pt-6">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Higher Secondary</h4>
+              <p className="text-base font-medium text-foreground">+2 Science</p>
+              <p className="text-sm text-muted-foreground mt-1">Sudurpaschimanchal Academy</p>
             </div>
           </CardContent>
         </Card>
