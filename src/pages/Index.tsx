@@ -279,21 +279,23 @@ const SkillsSection = () => {
         {skillCategories.map((category, index) => (
            <Card 
              key={category.title} 
-             className={`glass-card transition-all duration-700 hover:shadow-xl hover:-translate-y-2 ${
+             className={`surface-card border-border/70 transition-all duration-500 hover:-translate-y-1 ${
                visibleItems[index] 
                  ? 'animate-fade-in-up opacity-100' 
                  : 'opacity-0 translate-y-8'
              }`}
            >
-            <CardHeader>
-              <CardTitle className="text-lg font-bold mb-4">{category.title}</CardTitle>
+            <CardHeader className="pb-3 border-b border-border/60">
+              <CardTitle className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
+                <span className="text-foreground">{category.title}</span>
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="pt-5">
+              <div className="space-y-2">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill.name}
-                    className={`flex items-center space-x-3 p-3 rounded-lg bg-background/50 hover:bg-muted transition-all duration-300 hover:scale-105 ${
+                    className={`flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted/70 transition-colors duration-200 ${
                       visibleItems[index] ? 'animate-fade-in' : 'opacity-0'
                     } ${skillDelayClasses[skillIndex] ?? skillDelayClasses[skillDelayClasses.length - 1]}`}
                   >
@@ -301,15 +303,15 @@ const SkillsSection = () => {
                       <img 
                         src={skill.icon} 
                         alt={skill.name} 
-                        className="w-8 h-8 object-contain"
+                        className="w-6 h-6 object-contain"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                         }}
                       />
                     ) : (
-                      <span className="text-2xl">{skill.icon}</span>
+                      <span className="text-lg">{skill.icon}</span>
                     )}
-                    <span className="font-medium">{skill.name}</span>
+                    <span className="text-sm font-medium text-foreground/90">{skill.name}</span>
                   </div>
                 ))}
               </div>
