@@ -19,22 +19,21 @@ const AboutSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">About</span>
+      </div>
       <h2 
         ref={titleRef as any}
-        className={`text-4xl font-bold mb-8 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-5 transition-all duration-1000 ${
           titleVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
         }`}
       >
-        About Me
+        Crafting reliable software, one commit at a time.
       </h2>
-      <div 
-        className="w-20 h-1 bg-primary mx-auto mb-8 transition-all duration-1000 delay-300 ${
-          titleVisible ? 'animate-scale-in opacity-100' : 'opacity-0 scale-x-0'
-        }"
-      />
+      <div className="section-divider mb-8" />
       <p 
         ref={textRef as any}
-        className={`text-lg leading-relaxed text-muted-foreground transition-all duration-1000 ${
+        className={`text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto transition-all duration-1000 ${
           textVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
         }`}
       >
