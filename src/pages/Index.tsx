@@ -796,28 +796,35 @@ export default function Index() {
 
            {/* Profile Image */}
            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-             <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto mb-6">
-               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-[hsl(var(--gradient-middle))] to-[hsl(var(--gradient-end))] p-1 animate-spin [animation-duration:15s]">
-                 <div className="w-full h-full rounded-full overflow-hidden bg-background">
-                   <img 
-                     src="/lovable-uploads/5058cdc6-c2f4-4cb1-b8cc-303bca9df609.png"
-                     alt="Susan Acharya" 
-                     className="w-full h-full object-cover"
-                   />
-                 </div>
+             <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-8">
+               <div className="absolute -inset-3 rounded-full bg-foreground/[0.04] blur-xl"></div>
+               <div className="relative w-full h-full rounded-full overflow-hidden ring-1 ring-border bg-background shadow-[var(--shadow-md)]">
+                 <img 
+                   src="/lovable-uploads/5058cdc6-c2f4-4cb1-b8cc-303bca9df609.png"
+                   alt="Susan Acharya" 
+                   className="w-full h-full object-cover"
+                 />
                </div>
-
              </div>
            </div>
            
            {/* Name */}
-           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-3 gradient-text transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{animation: 'gradient-text 3s ease infinite'}}>
+           <div className={`mb-5 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-muted-foreground bg-background/80 backdrop-blur border border-border">
+               <span className="relative flex h-2 w-2">
+                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+               </span>
+               Available for opportunities
+             </span>
+           </div>
+           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-3 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
              Susan Acharya
            </h1>
            
            {/* Title */}
-           <h2 className={`text-xl md:text-2xl font-medium text-muted-foreground mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{animation: 'text-float 4s ease-in-out infinite'}}>
-             Full Stack Web Developer
+           <h2 className={`text-base md:text-lg font-normal text-muted-foreground mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+             Full-Stack Developer · <span className="text-foreground font-medium">Django</span> &amp; <span className="text-foreground font-medium">React</span>
            </h2>
 
 
