@@ -839,11 +839,11 @@ export default function Index() {
            </div>
 
            {/* CTA Buttons */}
-           <div className={`flex flex-wrap justify-center gap-4 mb-10 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+           <div className={`flex flex-wrap justify-center gap-3 mb-10 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
              <Button 
                onClick={() => scrollToSection('projects')}
                size="lg" 
-               className="btn-primary shadow-2xl hover:shadow-primary/30"
+               className="btn-primary"
              >
                View My Work
              </Button>
@@ -851,7 +851,7 @@ export default function Index() {
                variant="outline"
                size="lg" 
                onClick={() => window.open('https://drive.google.com/file/d/1qv1Ax8rl2FfuTZMncyP7CHbPUFV688YU/view?usp=sharing', '_blank')}
-               className="glass-card border-primary/30 hover:border-primary/60 hover:bg-primary/10 hover:scale-105 transition-all duration-500"
+               className="rounded-xl border-border hover:border-foreground/40 hover:bg-muted transition-all duration-300"
              >
                <Download className="mr-2 h-4 w-4" />
                Download CV
