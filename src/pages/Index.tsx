@@ -551,61 +551,56 @@ const LanguagesAchievementsSection = () => {
   return (
     <div ref={containerRef as any} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {/* Languages */}
-      <Card className={`transition-all duration-700 hover:shadow-lg hover:-translate-y-1 ${
+      <Card className={`surface-card transition-all duration-500 ${
         visibleItems[0] ? 'animate-fade-in-left opacity-100' : 'opacity-0 -translate-x-8'
       }`}>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <Globe className="h-5 w-5 text-primary animate-float" />
-            <span>Languages</span>
+        <CardHeader className="border-b border-border/60">
+          <CardTitle className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            <Globe className="h-4 w-4 text-foreground" />
+            <span className="text-foreground">Languages</span>
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pt-5">
           <div className="space-y-3">
-            <div className="flex justify-between items-center hover:scale-105 transition-transform duration-300">
-              <span>English</span>
-              <Badge className="animate-scale-in">Fluent</Badge>
+            <div className="flex justify-between items-center py-2 border-b border-border/40">
+              <span className="text-sm font-medium text-foreground">English</span>
+              <span className="text-xs px-2.5 py-0.5 rounded-md bg-muted text-foreground border border-border font-medium">Fluent</span>
             </div>
-            <div className="flex justify-between items-center hover:scale-105 transition-transform duration-300">
-              <span>Nepali</span>
-              <Badge className="animate-scale-in [animation-delay:100ms]">Native</Badge>
+            <div className="flex justify-between items-center py-2 border-b border-border/40">
+              <span className="text-sm font-medium text-foreground">Nepali</span>
+              <span className="text-xs px-2.5 py-0.5 rounded-md bg-foreground text-background font-medium">Native</span>
             </div>
-            <div className="flex justify-between items-center hover:scale-105 transition-transform duration-300">
-              <span>Hindi</span>
-              <Badge variant="secondary" className="animate-scale-in [animation-delay:200ms]">Intermediate</Badge>
+            <div className="flex justify-between items-center py-2">
+              <span className="text-sm font-medium text-foreground">Hindi</span>
+              <span className="text-xs px-2.5 py-0.5 rounded-md bg-muted text-muted-foreground border border-border font-medium">Intermediate</span>
             </div>
           </div>
         </CardContent>
       </Card>
 
       {/* Achievements */}
-      <Card className={`transition-all duration-700 hover:shadow-lg hover:-translate-y-1 ${
+      <Card className={`surface-card transition-all duration-500 ${
         visibleItems[1] ? 'animate-fade-in-right opacity-100' : 'opacity-0 translate-x-8'
       }`}>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <Trophy className="h-5 w-5 text-primary animate-wiggle" />
-            <span>Achievements</span>
+        <CardHeader className="border-b border-border/60">
+          <CardTitle className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            <Trophy className="h-4 w-4 text-foreground" />
+            <span className="text-foreground">Achievements</span>
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="space-y-3">
-            <div className="flex items-start space-x-2 hover:scale-105 transition-transform duration-300">
-              <Star className="h-4 w-4 text-primary mt-0.5 animate-pulse-slow" />
-              <span className="text-sm">Participated in a 48-hour hackathon organized by CodeYaatra</span>
-            </div>
-            <div className="flex items-start space-x-2 hover:scale-105 transition-transform duration-300">
-              <Star className="h-4 w-4 text-primary mt-0.5 animate-pulse-slow [animation-delay:200ms]" />
-              <span className="text-sm">Successfully built and deployed multiple web applications using Django</span>
-            </div>
-            <div className="flex items-start space-x-2 hover:scale-105 transition-transform duration-300">
-              <Star className="h-4 w-4 text-primary mt-0.5 animate-pulse-slow [animation-delay:400ms]" />
-              <span className="text-sm">Contributed to open-source projects on GitHub</span>
-            </div>
-            <div className="flex items-start space-x-2 hover:scale-105 transition-transform duration-300">
-              <Star className="h-4 w-4 text-primary mt-0.5 animate-pulse-slow [animation-delay:600ms]" />
-              <span className="text-sm">Completed Python and Django certification programs</span>
-            </div>
+        <CardContent className="pt-5">
+          <div className="space-y-1">
+            {[
+              "Participated in a 48-hour hackathon organized by CodeYaatra",
+              "Successfully built and deployed multiple web applications using Django",
+              "Contributed to open-source projects on GitHub",
+              "Completed Python and Django certification programs",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3 py-2.5 border-b border-border/40 last:border-0">
+                <Star className="h-3.5 w-3.5 text-foreground/70 mt-0.5 flex-shrink-0" strokeWidth={2.5} />
+                <span className="text-sm text-foreground/85 leading-relaxed">{item}</span>
+              </div>
+            ))}
           </div>
         </CardContent>
       </Card>
