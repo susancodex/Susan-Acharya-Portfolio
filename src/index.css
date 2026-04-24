@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,52 +7,62 @@
 
 @layer base {
    :root {
-     --background: 220 33% 98%;
-     --foreground: 221 39% 11%;
+     --background: 220 30% 98%;
+     --foreground: 222 47% 11%;
 
-     --card: 0 0% 100% / 0.7;
-     --card-foreground: 221 39% 11%;
+     --card: 0 0% 100% / 0.75;
+     --card-foreground: 222 47% 11%;
 
-     --popover: 0 0% 100% / 0.9;
-     --popover-foreground: 221 39% 11%;
+     --popover: 0 0% 100% / 0.95;
+     --popover-foreground: 222 47% 11%;
 
-     --primary: 239 84% 67%;
+     --primary: 224 76% 33%;
      --primary-foreground: 0 0% 100%;
 
-     --secondary: 210 40% 96%;
-     --secondary-foreground: 221 39% 11%;
+     --secondary: 220 14% 96%;
+     --secondary-foreground: 222 47% 11%;
 
      --muted: 220 14% 96%;
-     --muted-foreground: 220 9% 46%;
+     --muted-foreground: 220 9% 40%;
 
-     --accent: 221 83% 95%;
-     --accent-foreground: 221 39% 11%;
+     --accent: 224 71% 95%;
+     --accent-foreground: 222 47% 11%;
 
      --destructive: 0 84% 60%;
      --destructive-foreground: 0 0% 100%;
 
-     --border: 220 13% 91%;
+     --border: 220 13% 89%;
      --input: 220 13% 91%;
-     --ring: 239 84% 67%;
+     --ring: 224 76% 33%;
 
-     --radius: 1rem;
+     --radius: 0.875rem;
      
      /* Custom gradient colors */
-     --gradient-start: 239 84% 67%;
-     --gradient-middle: 217 91% 60%;
-     --gradient-end: 189 94% 50%;
+     --gradient-start: 224 76% 33%;
+     --gradient-middle: 222 89% 50%;
+     --gradient-end: 199 89% 48%;
      
      /* Glass effect colors */
-     --glass-bg: 0 0% 100% / 0.65;
-     --glass-border: 0 0% 100% / 0.2;
+     --glass-bg: 0 0% 100% / 0.7;
+     --glass-border: 220 13% 91% / 0.6;
      
      /* Accent colors */
-     --accent-blue: 217 91% 60%;
-     --accent-indigo: 239 84% 67%;
+     --accent-blue: 222 89% 50%;
+     --accent-indigo: 234 79% 50%;
      --accent-emerald: 160 84% 39%;
      --accent-pink: 330 81% 72%;
-     --accent-purple: 262 83% 58%;
-     --accent-cyan: 189 94% 50%;
+     --accent-purple: 262 60% 48%;
+     --accent-cyan: 199 89% 48%;
+
+     /* Surfaces */
+     --surface: 220 30% 99%;
+     --surface-muted: 220 25% 96%;
+     --surface-elevated: 0 0% 100%;
+
+     /* Shadows (soft, professional) */
+     --shadow-sm: 0 1px 2px hsl(222 47% 11% / 0.04);
+     --shadow-md: 0 6px 24px -8px hsl(222 47% 11% / 0.08);
+     --shadow-lg: 0 24px 48px -16px hsl(222 47% 11% / 0.12);
    }
 
   .dark {
@@ -95,10 +105,12 @@
      @apply text-foreground antialiased overflow-x-hidden;
      font-family: 'Inter', sans-serif;
      background: transparent;
+     font-feature-settings: "ss01", "cv11";
    }
    
    html {
-     background: hsl(220 33% 98%);
+     background: hsl(220 30% 98%);
+     scroll-behavior: smooth;
    }
    
    @keyframes gradient-shift {
@@ -210,9 +222,9 @@
    }
   
    h1, h2, h3, h4, h5, h6 {
-     font-family: 'Inter', sans-serif;
-     font-weight: 700;
-     letter-spacing: -0.025em;
+     font-family: 'Space Grotesk', 'Inter', sans-serif;
+     font-weight: 600;
+     letter-spacing: -0.02em;
    }
 }
 
@@ -222,7 +234,7 @@
   }
   
    .btn-primary {
-     @apply bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500 text-primary-foreground rounded-xl px-8 py-3 font-semibold transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/25 active:scale-[0.96] hover:scale-105 relative overflow-hidden;
+     @apply bg-foreground text-background rounded-xl px-7 py-3 font-medium tracking-tight transition-all duration-300 hover:shadow-xl hover:shadow-foreground/15 active:scale-[0.98] hover:-translate-y-0.5 relative overflow-hidden;
    }
    
    .btn-primary::before {
@@ -239,7 +251,19 @@
   }
   
    .glass-card {
-     @apply bg-[hsl(var(--glass-bg))] backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-2 hover:border-indigo-500/30;
+     @apply bg-[hsl(var(--glass-bg))] backdrop-blur-xl border border-border/60 rounded-2xl shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)] transition-all duration-300 hover:-translate-y-1 hover:border-foreground/20;
+   }
+
+   .surface-card {
+     @apply bg-[hsl(var(--surface-elevated))] border border-border/70 rounded-2xl shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)] transition-all duration-300;
+   }
+
+   .eyebrow {
+     @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground bg-muted border border-border/70;
+   }
+
+   .section-divider {
+     @apply w-12 h-px bg-foreground/20 mx-auto;
    }
   
   .gradient-text {
@@ -248,10 +272,10 @@
   
    .hero-gradient {
      background:
-       radial-gradient(ellipse at 10% 10%, hsl(var(--accent-indigo) / 0.15) 0%, transparent 50%),
-       radial-gradient(ellipse at 90% 90%, hsl(var(--accent-purple) / 0.1) 0%, transparent 50%),
-       radial-gradient(ellipse at 50% 50%, hsl(var(--accent-cyan) / 0.08) 0%, transparent 60%),
-       linear-gradient(180deg, hsl(220 33% 98%) 0%, hsl(220 20% 96%) 100%);
+       radial-gradient(ellipse at 12% 8%, hsl(var(--accent-indigo) / 0.10) 0%, transparent 55%),
+       radial-gradient(ellipse at 88% 92%, hsl(var(--accent-purple) / 0.08) 0%, transparent 55%),
+       radial-gradient(ellipse at 50% 50%, hsl(var(--accent-cyan) / 0.05) 0%, transparent 60%),
+       linear-gradient(180deg, hsl(220 30% 98%) 0%, hsl(220 22% 96%) 100%);
    }
   
   .card-glow {

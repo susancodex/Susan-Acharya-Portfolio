@@ -19,22 +19,21 @@ const AboutSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">About</span>
+      </div>
       <h2 
         ref={titleRef as any}
-        className={`text-4xl font-bold mb-8 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-5 transition-all duration-1000 ${
           titleVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
         }`}
       >
-        About Me
+        Crafting reliable software, one commit at a time.
       </h2>
-      <div 
-        className="w-20 h-1 bg-primary mx-auto mb-8 transition-all duration-1000 delay-300 ${
-          titleVisible ? 'animate-scale-in opacity-100' : 'opacity-0 scale-x-0'
-        }"
-      />
+      <div className="section-divider mb-8" />
       <p 
         ref={textRef as any}
-        className={`text-lg leading-relaxed text-muted-foreground transition-all duration-1000 ${
+        className={`text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto transition-all duration-1000 ${
           textVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-8'
         }`}
       >
@@ -91,19 +90,20 @@ const FeaturedProjectsSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">Selected Work</span>
+      </div>
       <h2
         ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-4 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center mb-4 transition-all duration-1000 ${
           titleVisible ? "animate-fade-in-down opacity-100" : "opacity-0 -translate-y-8"
         }`}
       >
         Featured Projects
       </h2>
-      <div
-        className={`w-20 h-1 bg-primary mx-auto mb-12 transition-all duration-1000 delay-300 ${
-          titleVisible ? "animate-scale-in opacity-100" : "opacity-0 scale-x-0"
-        }`}
-      />
+      <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+        A selection of full-stack and backend projects that demonstrate clean architecture, REST API design, and production-ready UX.
+      </p>
 
        <div ref={containerRef as any} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {projects.map((project, index) => (
@@ -256,14 +256,20 @@ const SkillsSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">Capabilities</span>
+      </div>
       <h2 
         ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-12 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center mb-4 transition-all duration-1000 ${
           titleVisible ? 'animate-fade-in-down opacity-100' : 'opacity-0 -translate-y-8'
         }`}
       >
-        Skills & Technologies
+        Skills &amp; Technologies
       </h2>
+      <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+        The tools, frameworks, and disciplines I rely on to ship dependable products.
+      </p>
        <div ref={containerRef as any} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
         {skillCategories.map((category, index) => (
            <Card 
@@ -317,14 +323,18 @@ const EducationSection = () => {
 
   return (
     <>
+      <div className={`flex justify-center mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+        <span className="eyebrow">Academic Background</span>
+      </div>
       <h2 
         ref={titleRef as any}
-        className={`text-4xl font-bold text-center mb-12 transition-all duration-1000 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center mb-4 transition-all duration-1000 ${
           titleVisible ? 'animate-fade-in-down opacity-100' : 'opacity-0 -translate-y-8'
         }`}
       >
-        🎓 Education
+        Education
       </h2>
+      <div className="section-divider mb-12" />
       
       <div ref={containerRef as any} className="max-w-4xl mx-auto">
        <Card className={`glass-card transition-all duration-700 hover:shadow-xl hover:-translate-y-2 ${
@@ -722,28 +732,38 @@ export default function Index() {
        </div>
 
        {/* Navigation */}
-       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-border/50 shadow-sm">
-         <div className="container mx-auto px-4 py-4">
+       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/75 backdrop-blur-xl border-b border-border/60">
+         <div className="container mx-auto px-4 py-3.5">
            <div className="flex justify-between items-center">
-             <h1 className="text-xl font-bold gradient-text">Susan Acharya</h1>
+             <button onClick={() => scrollToSection('about')} className="flex items-center gap-2 group">
+               <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-foreground text-background text-sm font-semibold tracking-tight">SA</span>
+               <span className="text-sm font-medium tracking-tight text-foreground/90 group-hover:text-foreground transition-colors">Susan Acharya</span>
+             </button>
              
              {/* Desktop Navigation */}
-             <div className="hidden md:flex items-center gap-8">
+             <div className="hidden md:flex items-center gap-7">
                {["about", "skills", "projects", "education", "contact"].map((item) => (
                  <button
                    key={item}
                    onClick={() => scrollToSection(item)}
-                   className="text-muted-foreground hover:text-foreground transition-all duration-300 capitalize relative group"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 capitalize relative group"
                  >
                    {item}
-                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full"></span>
                  </button>
                ))}
+               <Button
+                 size="sm"
+                 className="btn-primary !px-5 !py-2 !text-sm"
+                 onClick={() => scrollToSection('contact')}
+               >
+                 Hire Me
+               </Button>
              </div>
              
              {/* Mobile Menu Button */}
              <button 
-               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-foreground"
                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
              >
                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -776,28 +796,35 @@ export default function Index() {
 
            {/* Profile Image */}
            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-             <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto mb-6">
-               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-[hsl(var(--gradient-middle))] to-[hsl(var(--gradient-end))] p-1 animate-spin [animation-duration:15s]">
-                 <div className="w-full h-full rounded-full overflow-hidden bg-background">
-                   <img 
-                     src="/lovable-uploads/5058cdc6-c2f4-4cb1-b8cc-303bca9df609.png"
-                     alt="Susan Acharya" 
-                     className="w-full h-full object-cover"
-                   />
-                 </div>
+             <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-8">
+               <div className="absolute -inset-3 rounded-full bg-foreground/[0.04] blur-xl"></div>
+               <div className="relative w-full h-full rounded-full overflow-hidden ring-1 ring-border bg-background shadow-[var(--shadow-md)]">
+                 <img 
+                   src="/lovable-uploads/5058cdc6-c2f4-4cb1-b8cc-303bca9df609.png"
+                   alt="Susan Acharya" 
+                   className="w-full h-full object-cover"
+                 />
                </div>
-
              </div>
            </div>
            
            {/* Name */}
-           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-3 gradient-text transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{animation: 'gradient-text 3s ease infinite'}}>
+           <div className={`mb-5 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-muted-foreground bg-background/80 backdrop-blur border border-border">
+               <span className="relative flex h-2 w-2">
+                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+               </span>
+               Available for opportunities
+             </span>
+           </div>
+           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-3 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
              Susan Acharya
            </h1>
            
            {/* Title */}
-           <h2 className={`text-xl md:text-2xl font-medium text-muted-foreground mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{animation: 'text-float 4s ease-in-out infinite'}}>
-             Full Stack Web Developer
+           <h2 className={`text-base md:text-lg font-normal text-muted-foreground mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+             Full-Stack Developer · <span className="text-foreground font-medium">Django</span> &amp; <span className="text-foreground font-medium">React</span>
            </h2>
 
 
@@ -812,11 +839,11 @@ export default function Index() {
            </div>
 
            {/* CTA Buttons */}
-           <div className={`flex flex-wrap justify-center gap-4 mb-10 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+           <div className={`flex flex-wrap justify-center gap-3 mb-10 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
              <Button 
                onClick={() => scrollToSection('projects')}
                size="lg" 
-               className="btn-primary shadow-2xl hover:shadow-primary/30"
+               className="btn-primary"
              >
                View My Work
              </Button>
@@ -824,7 +851,7 @@ export default function Index() {
                variant="outline"
                size="lg" 
                onClick={() => window.open('https://drive.google.com/file/d/1qv1Ax8rl2FfuTZMncyP7CHbPUFV688YU/view?usp=sharing', '_blank')}
-               className="glass-card border-primary/30 hover:border-primary/60 hover:bg-primary/10 hover:scale-105 transition-all duration-500"
+               className="rounded-xl border-border hover:border-foreground/40 hover:bg-muted transition-all duration-300"
              >
                <Download className="mr-2 h-4 w-4" />
                Download CV
@@ -873,7 +900,7 @@ export default function Index() {
        </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
+      <section id="about" className="py-20 md:py-28 bg-background/60 backdrop-blur-sm border-y border-border/40 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <AboutSection />
@@ -882,53 +909,58 @@ export default function Index() {
       </section>
 
       {/* Featured Projects Section */}
-      <section id="projects" className="py-20 relative z-10">
+      <section id="projects" className="py-20 md:py-28 relative z-10">
         <div className="container mx-auto px-4">
           <FeaturedProjectsSection />
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
+      <section id="skills" className="py-20 md:py-28 bg-background/60 backdrop-blur-sm border-y border-border/40 relative z-10">
         <div className="container mx-auto px-4">
           <SkillsSection />
         </div>
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 relative z-10">
+      <section id="education" className="py-20 md:py-28 relative z-10">
         <div className="container mx-auto px-4">
           <EducationSection />
         </div>
       </section>
 
       {/* Certificates Section */}
-      <section className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
+      <section className="py-20 md:py-28 bg-background/60 backdrop-blur-sm border-y border-border/40 relative z-10">
         <div className="container mx-auto px-4">
           <CertificatesSection />
         </div>
       </section>
 
       {/* Languages & Achievements */}
-      <section className="py-20 bg-sky-50/40 backdrop-blur-sm relative z-10">
+      <section className="py-20 md:py-28 relative z-10">
         <div className="container mx-auto px-4">
           <LanguagesAchievementsSection />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 relative z-10">
+      <section id="contact" className="py-20 md:py-28 bg-background/60 backdrop-blur-sm border-y border-border/40 relative z-10">
         <div className="container mx-auto px-4">
           <ContactSection handleContactSubmit={handleContactSubmit} />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white/60 backdrop-blur-sm border-t border-sky-100 py-8 relative z-10">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground">
-            © 2024 Susan Acharya. All rights reserved.
+      <footer className="bg-background/80 backdrop-blur-sm border-t border-border py-10 relative z-10">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Susan Acharya. Crafted with care.
           </p>
+          <div className="flex items-center gap-4">
+            <a href="https://github.com/susancodex" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors"><Github className="h-4 w-4" /></a>
+            <a href="https://www.linkedin.com/in/susan-acharya1618" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors"><Linkedin className="h-4 w-4" /></a>
+            <a href="mailto:susanacharya.sp@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors"><Mail className="h-4 w-4" /></a>
+          </div>
         </div>
       </footer>
     </div>
